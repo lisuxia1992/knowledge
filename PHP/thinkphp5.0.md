@@ -10,6 +10,7 @@
 
 2.安装Javasdk服务,xampp服务和MySQL服务
 
+	注意：xampp在电脑重启之后，服务开启不了，原因为：端口被占用或与mac系统默认的Apache服务冲突，解决办法：sudo apachectl stop停掉系统预装的Apache
 
 3.数据库支持:Navicat MySQL
 
