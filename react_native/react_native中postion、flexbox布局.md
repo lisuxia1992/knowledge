@@ -21,6 +21,8 @@
 
 flex键的类型是数值，取值为0或者大于0的整数，默认值为0。当它的值为1时且子组件只有自己时，子组件将自动缩放以适应父组件剩下的所有空白空间。
 
+**组件能够撑满剩余空间的前提是其父容器的尺寸不为零。如果父容器既没有固定的width和height，也没有设定flex，则父容器的尺寸为零。其子组件如果使用了flex，也是无法显示的。**
+
 当一个父组件中有多个子组件时，比如下面的案例中，container组件中有4个子组件，子组件的flex值分别为，1，1，2，1，那么 container就会被平分为5份，他们所占的面积比例关系为:1:1:2:1
 
 ![](http://img0.tuicool.com/zm2iUfu.png)
@@ -37,7 +39,7 @@ position，它是字符串类型，可以取值为relative(默认值)或者absol
 
 ####flexDirection
 
-flexDirection键决定了组件内部的子组件是如何排列的，它的取值可以为column、row，对应下图中的左起第二个、第三个图。而W3C提出的row-reverse和column-reverse则不支持，如果View的样式里没有定义flexDirection，则默认值为column。
+flexDirection键决定了组件内部的子组件是如何排列的，它的取值可以为column、row，对应下图中的左起第二个、第三个图。而W3C提出的row-reverse和column-reverse则不支持，**如果View的样式里没有定义flexDirection，则默认值为column**。
 ![](http://img0.tuicool.com/vYFbmmA.png)
 
 ####flexWrap
@@ -47,13 +49,13 @@ flexDirection键决定了组件内部的子组件是如何排列的，它的取�
 
 ####justifyContent
 
-justifyContent键用来定义方向上如何排列子组件。它有5种可能的字符串值：flex-start、flex-end、center、space-between、space-around,它们对应的布局示意图如下图所示。
+justifyContent键用来定义主轴方向上如何排列子组件。它有5种可能的字符串值：flex-start、flex-end、center、space-between、space-around,它们对应的布局示意图如下图所示：
 ![](http://img0.tuicool.com/7juimif.png)
 
 
 ####alignItems
 
-alignItems键定义了View组件中所有子组件的对其规则。它有4种可能的字符串值：flex-start、flex-end、center、stretch。其中，flex-start代表顶部对齐；flex-end代表底部对齐；center 代表中部对齐；stretch代表拉长对齐。它们的布局示意图如下图所示：
+alignItems键定义了View组件中所有子组件的对其规则,**决定其子元素沿着次轴（与主轴垂直的轴，比如若主轴方向为row，则次轴方向为column**）的排列方式。它有4种可能的字符串值：flex-start、flex-end、center、stretch。其中，flex-start代表顶部对齐；flex-end代表底部对齐；center 代表中部对齐；stretch代表拉长对齐，其默认值为：stretch。它们的布局示意图如下图所示：
 ![](http://img0.tuicool.com/IFfemmA.png)
 
 ####alignSelf
