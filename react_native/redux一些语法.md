@@ -1,10 +1,30 @@
 ###Redux一些语法
 
+####Redux基础概念
 Redux 把自己标榜为一个“可预测的状态容器”，其实也是 Flux 里面“单向数据流”的思想，只是它充分利用函数式的特性，让整个实现更加优雅纯粹，使用起来也更简单。
 
 Redux(oldState) => newState
 
 Redux 是超越 Flux 的一次进化。
+
+
+###使用须知
+1. 首先创建store，链接action和reducer
+2. 定义action对象用来获取数据并dispatch出去
+3. reducer根据action中的type对action中的数据state进行更改，然后返回新的state
+4. 多个reducer可以统一管理，key和value不一致时需遵循key：value格式
+5. 创建好的store作为root的state保存起来，root组件需使用provider标签包裹
+6. 使用时，调mapStateToProps和mapDispatchToProps方法读取redux管理的state和action，然后 包装 component ，注入 dispatch 和 state 到其默认的 connect(select)(App) 中
+
+		import { connect } from 'react-redux'
+		// 包装 component ，注入 dispatch 和 state 
+		export default connect(
+  			mapStateToProps,
+  			mapDispatchToProps
+		)(Group)
+7. 调用action方法
+8. 通过props读取数据
+
 
 #####什么是 pure function
 
@@ -15,7 +35,6 @@ Redux 是超越 Flux 的一次进化。
 基于这样的 Store，可以做很多扩展，这也是 Redux 强大之处。
 
 
-####Redux基础概念
 
 #####三个基本原则
 
@@ -144,7 +163,7 @@ Action 是一个包含 { type, payload } 的对象，它描述了“发生了什
 	
 
 ####在React应用中使用Redux
-参考<https://hulufei.gitbooks.io/react-tutorial/content/usage-with-react.html>
+参考：<https://hulufei.gitbooks.io/react-tutorial/content/usage-with-react.html>
 
 ####参考文章
 <https://hulufei.gitbooks.io/react-tutorial/content/redux-basic.html>
