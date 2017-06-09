@@ -283,3 +283,5 @@ except urllib2.HTTPError as e:
 <http://www.jianshu.com/p/c69deb29720d>  
 <http://www.techv5.com/topic/363/>(设置Jenkins登录权限)
 以上.
+
+<http://blog.jiar.vip/2016/08/28/iOS%E9%A1%B9%E7%9B%AE%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/?nsukey=NawExDJrJHkccMLFH3p7uvNSOfyka4zqdKr4AHgJdhTr8ld%2F6sS761EN9pHN59fZXYO6kXqJ2jIRIym5hjxmYvcwUDIhCQQCzBJoCg1E2pAqOu%2BbGWwr%2BqBhwC6NjeLUuFfZBG5%2BEdk3%2BAZTrF0K3i7m9zeIkdDrt9DdyNdA4IlBsOz1qaXT33gA8JvZ4an8>
